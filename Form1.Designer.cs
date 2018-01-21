@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form1));
             this.label1 = new System.Windows.Forms.Label();
             this.urlListBox = new System.Windows.Forms.ListBox();
-            this.axShockwaveFlash = new AxShockwaveFlashObjects.AxShockwaveFlash();
-            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash)).BeginInit();
+            this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
             // label1
@@ -50,31 +48,31 @@
             this.urlListBox.FormattingEnabled = true;
             this.urlListBox.Location = new System.Drawing.Point(15, 41);
             this.urlListBox.Name = "urlListBox";
-            this.urlListBox.Size = new System.Drawing.Size(203, 238);
+            this.urlListBox.Size = new System.Drawing.Size(203, 303);
             this.urlListBox.TabIndex = 1;
             this.urlListBox.SelectedIndexChanged += new System.EventHandler(this.urlListBox_SelectedIndexChanged);
             // 
-            // axShockwaveFlash
+            // webBrowser
             // 
-            this.axShockwaveFlash.Enabled = true;
-            this.axShockwaveFlash.Location = new System.Drawing.Point(235, 41);
-            this.axShockwaveFlash.Name = "axShockwaveFlash";
-            this.axShockwaveFlash.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlash.OcxState")));
-            this.axShockwaveFlash.Size = new System.Drawing.Size(417, 238);
-            this.axShockwaveFlash.TabIndex = 2;
+            this.webBrowser.AllowWebBrowserDrop = false;
+            this.webBrowser.Location = new System.Drawing.Point(224, 41);
+            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.ScrollBarsEnabled = false;
+            this.webBrowser.Size = new System.Drawing.Size(506, 303);
+            this.webBrowser.TabIndex = 2;
             // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 297);
-            this.Controls.Add(this.axShockwaveFlash);
+            this.ClientSize = new System.Drawing.Size(753, 362);
+            this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.urlListBox);
             this.Controls.Add(this.label1);
             this.Name = "form1";
             this.Text = "Youtube";
             this.Load += new System.EventHandler(this.form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,7 +82,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox urlListBox;
-        private AxShockwaveFlashObjects.AxShockwaveFlash axShockwaveFlash;
+        private System.Windows.Forms.WebBrowser webBrowser;
     }
 }
 

@@ -55,10 +55,10 @@ namespace YouTubePlayerAndDownloader
             while (reader.Read())
             {
                 url = reader["YouTubeURL"].ToString();
+                webBrowser.Navigate(url);
             }
 
-            axShockwaveFlash.Movie = url;
-            axShockwaveFlash.Play();
+            
 
             connection.Close();
         }
