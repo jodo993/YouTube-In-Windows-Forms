@@ -30,7 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.urlListBox = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.webBrowser = new System.Windows.Forms.WebBrowser();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // label1
@@ -52,22 +54,41 @@
             this.urlListBox.TabIndex = 1;
             this.urlListBox.SelectedIndexChanged += new System.EventHandler(this.urlListBox_SelectedIndexChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(283, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // webBrowser
             // 
-            this.webBrowser.AllowWebBrowserDrop = false;
             this.webBrowser.Location = new System.Drawing.Point(224, 41);
             this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser.Name = "webBrowser";
-            this.webBrowser.ScrollBarsEnabled = false;
-            this.webBrowser.Size = new System.Drawing.Size(506, 303);
-            this.webBrowser.TabIndex = 2;
+            this.webBrowser.Size = new System.Drawing.Size(581, 388);
+            this.webBrowser.TabIndex = 4;
+            this.webBrowser.Url = new System.Uri("", System.UriKind.Relative);
+            this.webBrowser.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser_ProgressChanged);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(224, 444);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(581, 23);
+            this.progressBar1.TabIndex = 5;
             // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 362);
+            this.ClientSize = new System.Drawing.Size(817, 479);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.webBrowser);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.urlListBox);
             this.Controls.Add(this.label1);
             this.Name = "form1";
@@ -82,7 +103,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox urlListBox;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.WebBrowser webBrowser;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
